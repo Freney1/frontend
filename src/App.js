@@ -18,11 +18,6 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import UserContext from './context/UserContext'
 import ScoringEventsTable from './components/ScoringEventsTable'
 
-const cors = require('cors');
-const express = require('express');
-let app = express();
-app.use(cors());
-app.options('*', cors());
 
 const LoggedInRoute = ({ component: Component, ...rest }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(null)
